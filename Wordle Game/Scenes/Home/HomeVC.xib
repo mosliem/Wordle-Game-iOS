@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="Wordle_Game" customModuleProvider="target">
+            <connections>
+                <outlet property="howToPlayButton" destination="mwZ-Hk-tuh" id="U8K-Xr-K50"/>
+                <outlet property="newGameButton" destination="YIJ-aO-BlP" id="KcG-Sa-rph"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wordle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI3-2k-eOt">
+                    <rect key="frame" x="15" y="164" width="384" height="79"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="65"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
+                    <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <size key="shadowOffset" width="-2" height="1"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIJ-aO-BlP">
+                    <rect key="frame" x="80" y="342.5" width="254" height="60"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Kt4-gY-MQG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <state key="normal" title="New Game">
+                        <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                    </state>
+                    <connections>
+                        <action selector="newGameButtonPressed:" destination="-1" eventType="touchUpInside" id="Cd5-QD-PwS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwZ-Hk-tuh">
+                    <rect key="frame" x="80" y="441.5" width="254" height="60"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="tD0-X8-0iw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <state key="normal" title="How to play">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="howToPlayButtonPressed:" destination="-1" eventType="touchUpInside" id="XVe-1Y-oTo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.16264870740000001" green="0.18120120880000001" blue="0.1846748497" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YIJ-aO-BlP" firstAttribute="top" secondItem="vI3-2k-eOt" secondAttribute="bottom" constant="99.5" id="1dd-7e-LUJ"/>
+                <constraint firstItem="YIJ-aO-BlP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="3t2-x0-a8N"/>
+                <constraint firstItem="mwZ-Hk-tuh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="TR7-Ff-JUm"/>
+                <constraint firstItem="vI3-2k-eOt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="X8p-ii-6PT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mwZ-Hk-tuh" secondAttribute="trailing" constant="80" id="Xa3-jq-Z1D"/>
+                <constraint firstItem="vI3-2k-eOt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="120" id="YYZ-PI-uGD"/>
+                <constraint firstItem="mwZ-Hk-tuh" firstAttribute="top" secondItem="YIJ-aO-BlP" secondAttribute="bottom" constant="39" id="q5a-Dd-Wv1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YIJ-aO-BlP" secondAttribute="trailing" constant="80" id="uoG-P4-MzR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vI3-2k-eOt" secondAttribute="trailing" constant="15" id="y04-eG-3JJ"/>
+            </constraints>
+            <point key="canvasLocation" x="101.59999999999999" y="73.313343328335833"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

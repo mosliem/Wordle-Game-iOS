@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoVC" customModule="Wordle_Game" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="yBS-jt-4z6" id="8Eq-Vl-7fU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLd-dF-m6N">
+                    <rect key="frame" x="20" y="146" width="374" height="96.5"/>
+                    <string key="text">- You'll have 6 chances to guess the 5-letter word of the day, so make every guess count! Try using a word that contains many different letters to narrow down your future guesses. </string>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-I7-341">
+                    <rect key="frame" x="20" y="257.5" width="374" height="337"/>
+                    <string key="text">- After you make a guess, the tile colors will change:
+
+- A green tile indicates that you've guessed the correct letter in the correct place in the word.                                        
+
+- A orange tile means you've guessed a letter that's in the word, but not in the right spot.
+
+- A red tile means that letter is not in the word.                                              
+ 
+- Continue entering your guesses until all letters are green.</string>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ot-SI-fg8">
+                    <rect key="frame" x="20" y="66" width="374" height="50"/>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="35"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBS-jt-4z6">
+                    <rect key="frame" x="20" y="79" width="30" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="fNN-fC-GRs"/>
+                        <constraint firstAttribute="height" constant="30" id="vux-SA-9En"/>
+                    </constraints>
+                    <color key="tintColor" red="0.16264870740000001" green="0.18120120880000001" blue="0.1846748497" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal">
+                        <imageReference key="image" image="arrow.left" catalog="system" symbolScale="medium"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="J8O-Jl-3TJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.16264870740000001" green="0.18120120880000001" blue="0.1846748497" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TLd-dF-m6N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9c3-ia-JQL"/>
+                <constraint firstItem="7Ot-SI-fg8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="22" id="CVL-dD-2V7"/>
+                <constraint firstItem="TLd-dF-m6N" firstAttribute="top" secondItem="7Ot-SI-fg8" secondAttribute="bottom" constant="30" id="JJO-ka-7EC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wbx-I7-341" secondAttribute="trailing" constant="20" id="ZnY-xw-Hgc"/>
+                <constraint firstItem="7Ot-SI-fg8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fq3-vc-8vY"/>
+                <constraint firstItem="wbx-I7-341" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="g4D-Uf-q7H"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TLd-dF-m6N" secondAttribute="trailing" constant="20" id="jYg-JJ-YZC"/>
+                <constraint firstItem="yBS-jt-4z6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="sDp-vh-QWF"/>
+                <constraint firstItem="yBS-jt-4z6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="vDi-nA-m16"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Ot-SI-fg8" secondAttribute="trailing" constant="20" id="wBW-HL-Cab"/>
+                <constraint firstItem="wbx-I7-341" firstAttribute="top" secondItem="TLd-dF-m6N" secondAttribute="bottom" constant="15" id="x6V-Cd-Ygj"/>
+            </constraints>
+            <point key="canvasLocation" x="111.59420289855073" y="73.660714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+    </resources>
+</document>
