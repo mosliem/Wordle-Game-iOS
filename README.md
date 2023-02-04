@@ -8,7 +8,7 @@
   
 <br>
 <p align="center">
-<img src="https://github.com/mosliem/Wordle-Game-iOS/blob/main/images/banner.jpg" height = 600  />
+<img src="https://github.com/mosliem/Wordle-Game-iOS/blob/main/images/banner.jpg" />
 </p>
  
  
